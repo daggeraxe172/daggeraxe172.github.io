@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="ravi.jpg" type="image/jpg">
+<title>2019503549</title>
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-color : #E5E3E7;
+  border:1px dashed #04031A; 
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a:link{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; 
+  font-size: 1.3em; 
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+ul li{
+  color:red;
+}
+
+.table{
+  counter-reset:snum;
+}
+
+.table td:first-child:before {
+  counter-increment:snum;
+  content:counter(snum);
+}
+
+
+img{
+  border:1px solid #FFFFFF;
+  width:100px;
+  heigth:100px;
+  margin: 5px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
+}
+
+
+img.endimage{
+  display: block;
+  margin:auto;
+}
+
+h1{
+  text-align : center;
+  color : #0A090A;
+  background-color: orange ;
+  font-size : 2.5em;
+  font-family : algerian,Impact, Charcoal, sans-serif;
+  border: 2px solid #F63008;
+  border-radius:25px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.flex-container > div {
+  background-color: transparent;
+  width: 50%;
+  margin: 10px;
+  text-align: center;
+
+}
+
+
+@media screen and (max-width: 600px) {
+  .flex-container {
+    width: 100%;
+  }
+}
+
+a:link {
+  text-decoration: none;
+  color:#818181;
+}
+
+a:visited {
+  text-decoration: none;
+  color:#818181;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: transparent;
+  width: 100%;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; 
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side */
+.flip-box-front {
+
+}
+
+/* Style the back side */
+.flip-box-back {
+
+  transform: rotateY(180deg);
+}
+
+hr{
+border:1px solid #fff;
+margin:5px;
+}
+</style>
+<script>
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "VISITS : " + localStorage.clickcount;
+  } 
+}
+</script>
+</head>
+<body onload="clickCounter()">
+
+<div class="sidenav"><br>
+  <a href="home.html">Profile</a><br>
+  <a href="know.html">Know Me Better</a><br>
+  <a href="quiz.html">Indian Armed Forces</a><br>
+  <a href="contact.html">Contact</a>  <br>
+  <div style="position: absolute; color:#ffffff; bottom: 5%; left:40px; border:1px dashed #ffffff; padding:5px; " id="result" title="PAGE VIEWS" Alt="PHP Hits Count"   border="0"></div>
+</div>
+
+<div class="main">
+
+  <h1><u><img src="scenery1.jpg" alt="A scenery" />ABOUT MYSELF<img src="scenery2.jpg" alt="A scenery" /></u></h1>
+  
+ <div class="flex-container">
+ 
+  <div>
+  
+  <div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      
+    Name : <b>RAVI KANT</b>
+		  <br/><img style=" width:275px; height:350px; " src="ravi.jpg" alt="ravi kant picture"  />
+  
+    </div>
+    <div class="flip-box-back"> 
+    <ul>
+	<li>
+      Age : 18 YEARS
+    </li>
+	<li>
+      Occupation : STUDENT
+    </li>
+	<li>
+          Schooling : <a href="kvs.html" target:"_blank">KENDRIYA VIDYALAYA INDIA</a>
+          <br/><img style=" width:175px; height:100px; " src="kvslogo.jpg" alt="Logo of Kendriya Vidyalaya Sangathan"  />
+        </li>
+		<li>
+		  College : <a href="anna.html" target:"_blank">ANNA UNIVERSITY - MIT CAMPUS CHENNAI</a>
+		  <br/><img style=" width:150px; height:150px; " src="annalogo.png" alt="Logo of Anna University"  />
+		</li>
+      </ul>
+  </div>
+  </div>
+  </div>
+  
+  </div>
+  
+  <div>
+  
+    <ul>
+        <p>
+        <li >
+          <b>WHAT I THINK ABOUT ME ?</b>
+          </li>
+      <span style="color:#5B3D3D;">A GREAT LEARNER WHO CAN BE SLOW AND FRUSTRATING AT TIMES BUT STILL GIVES HIS FULL EFFORT IN DOING EVERY TASK GIVEN TO HIM. </span>
+      </p>
+      <p>
+      <li>
+        <b>WHAT I WOULD LIKE TO BECOME ?</b>
+        </li>
+      <span style="color:#5B3D3D;">IT IS ALWAYS GOOD TO BECOME A BETTER YOU DAY AFTER DAY BUT FOR MOTIVATION I LOOK FOR SOMEONE WHO IS BETTER THAN MYSELF.</span>
+      </p> 
+      </ul>
+	  <br>
+	  <br>
+	  <p style="text-align:center;"><em>ALWAYS</em> KEEP MOVING WITH A <strong>SMILE</strong> ON YOUR FACE.<br/> <u><b>THANK YOU</b> FOR READING <i>PATIENTLY</i>.</u></p> 
+  </div>
+  
+</div>
+
+
+ 
+   <hr> 
+  <img src="https://media.giphy.com/media/eJRuUt3VzkWKqzlyA0/giphy.gif" class="endimage" />
+  <p style="text-align:center; font-size:0.8em;">BEST VIEWED ON PC ON CHROME,OPERA,EDGE</p>
+  
+
+   
+</body>
+</html> 
